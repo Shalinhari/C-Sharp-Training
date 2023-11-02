@@ -1,0 +1,22 @@
+using System;
+
+interface Icar
+{
+    void Sound();
+}
+class Car : Icar
+{
+    public void Sound()
+    {
+        Console.WriteLine("--!!!!--");
+    }
+}
+class Bike : Car
+{
+    public static void Main(string[] args)
+    {
+        Bike bike = new Bike();
+        Car car = new Car();
+        bike.Sound();
+    }
+}
