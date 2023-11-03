@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
-public class Bank
+public class Example
 {
     static int balance =0;
     Hashtable user = new Hashtable();
     static void  WithDrawal(){
         Console.WriteLine("Enter the amount for withdraw");
         int amount = Convert.ToInt32(Console.ReadLine());
-        if(amount>balance){
+        if(amount>=balance){
             Console.WriteLine("Insufficient balance");
-        }else if(amount<balance){
+        }else if(amount<=balance){
             balance-=amount;
             Console.WriteLine("AMOUNT WITHDRAWED:{0}",amount);
         }
@@ -20,19 +20,17 @@ public class Bank
         int amount=Convert.ToInt32(Console.ReadLine());
         if(amount<5000){
             balance+=amount;
-        }else if(amount>5000 && amount<10000){
-           int tax = 100;
-           amount=amount-tax;
+        }else if(amount>=5000 && amount<10000){
            balance+=amount;
         }else if(amount>10001){
-           int tax =500;
-           amount=amount-tax;
            balance+=amount;
         }
         Console.WriteLine("Amount successfully deposited");
         Balance();
+        WithDrawal();
     }
     static void Balance(){
+        Console.WriteLine("--BALANCE ENQUIRY--");
         Console.WriteLine("YOUR AVALIABLE BALANCE IS:{0}",balance);
     }
     
@@ -67,7 +65,7 @@ public class Bank
     void Login()
     {
         Console.WriteLine();
-        Console.WriteLine("LOGIN");
+        Console.WriteLine("--LOGIN--");
         Console.WriteLine();
         Console.WriteLine("Enter your user Id:");
         string userid = Console.ReadLine();
