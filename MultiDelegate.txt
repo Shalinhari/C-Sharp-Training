@@ -13,7 +13,9 @@ public class MultiDelegate
     public static void Main(string[] args)
     {
         MultiDelegate obj = new MultiDelegate();
+
         Greeting obj1, obj2, obj3;
+
         obj1 = obj.Good;
         obj2 = obj.Bad;
         obj3 = obj1+obj2;
