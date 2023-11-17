@@ -1,18 +1,28 @@
 using System;
+
+
 delegate void Add(int a,int b);
+
 
 public class Program
 {
+
     public void Adding(int a , int b)
     {
         Console.WriteLine(a + b);
     }
+
+
     public void Subtraction(int a , int b)
     {
           Console.WriteLine(a - b);
     }
+
+
     public static void Main(string[] args)
     {
+
+dell
         Program obj= new Program();
 
         Add obj_del;
